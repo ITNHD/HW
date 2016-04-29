@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textLabelName: UITextField!
+  
+    @IBOutlet weak var LabelDinamic: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +23,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func changeButton(sender: AnyObject) {
+        
+        LabelDinamic.text = "Hola \(textLabelName.text!)"
+        view.endEditing(true)
+    }
 
-
+    //Comentary
+    
 }
 
